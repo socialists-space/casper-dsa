@@ -41,10 +41,32 @@ body {
     border-radius: 100%;
 }
 
+.banner-img {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0rem;
+}
+
 .hidden {
     visibility: hidden;
     position: absolute;
     text-indent: -9999px;
+}
+
+.propoganda {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.propoganda p {
+    width: 75%;
+    font-size: 1.5em;
+}
+
+.propoganda p::after {
+    content: "Y'allidarity forever!";
+    color: var(--red);
 }
 
 
