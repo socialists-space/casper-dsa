@@ -1,0 +1,5 @@
+{{#get "posts" limit="1" order="published_at desc" filter="featured:true"}}
+    {{#foreach posts}}
+        {{> "post-card"}}
+    {{/foreach}}
+{{/get}}

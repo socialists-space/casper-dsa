@@ -6,7 +6,11 @@ into the {body} of the default.hbs template --}}
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        {{> "propoganda"}}
+        {{> "propoganda-text"}}
+
+        {{> "propoganda-featured"}}
+
+        {{> "propoganda-img"}}
 
         <div class="post-feed">
             {{#foreach posts}}
