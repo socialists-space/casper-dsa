@@ -1,7 +1,15 @@
 <div class="propoganda">
-    <p>
-        The Democratic Socialists of America is the largest socialist organization in the United States. We organize nationally and
-        here in Charleston to fight for a more fair, democratic world: one based on principles of economic, gender, and racial
-        justice.
+    <p id="propoganda__text">
     </p>
 </div>
+
+<div class="banner-img">
+    <img id="propoganda__img" src="/assets/images/socialism_over_barbarism.jpg" alt="Socialism over Barbarism; Charleston DSA" />
+</div>
+
+<script>
+    document.getElementById('propoganda__text').innerText = window.propogandaText;
+    var propImg = document.getElementById('propoganda__img');
+    propImg['src'] = window.propogandaImgSrc;
+    propImg['alt'] = window.propogandaImgAlt;
+</script>
