@@ -218,7 +218,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .site-nav-logo {
-    flex-shrink: 0;
     display: block;
     margin-right: 24px;
     padding: 9px 0;
@@ -235,8 +234,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .site-nav-logo img {
     display: block;
-    width: auto;
-    height: 250px;
+    width: 100%;
+    height: auto;
 }
 
 .nav {
@@ -362,12 +361,35 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         padding-right: 0;
         padding-left: 0;
     }
+    .site-nav-top {
+        flex-direction: column;
+    }
     .site-nav-top-left {
         margin-right: 0;
         padding-left: 4vw;
     }
     .site-nav-top-right {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .social-links {
+        flex-direction: row;
+    }
+}
+
+#little-title-img {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .site-nav-logo {
+        margin-right: 10px;
+    }
+    #big-title-img {
         display: none;
+    }
+    #little-title-img {
+        display: block;
     }
 }
 
@@ -1592,7 +1614,20 @@ Usage (In Ghost editor):
 }
 
 .site-nav-center .site-nav-logo {
+    position: relative !important;
+    flex: 1 1 auto !important;
+}
+
+.site-nav-logo .logo {
     margin-right: 0;
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover;
+}
+
+@media(max-width: 750px) {
+
 }
 
 .error-message {
