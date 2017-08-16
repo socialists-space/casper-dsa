@@ -1,5 +1,7 @@
-{{#get "posts" limit="1" order="published_at desc" filter="featured:true"}}
-    {{#foreach posts}}
-        {{> "post-card"}}
-    {{/foreach}}
-{{/get}}
+<div class="propoganda-featured-post">
+    {{#get "posts" limit="1" order="published_at desc" filter="featured:true"}}
+        {{#foreach posts}}
+            {{> "post-card"}}
+        {{/foreach}}
+    {{/get}}
+</div>

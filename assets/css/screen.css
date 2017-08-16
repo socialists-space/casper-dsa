@@ -334,8 +334,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     color: #fff;
     font-size: 1.2rem;
     line-height: 1em;
-    border-radius: 10px;
     opacity: 0.8;
+    width: 200px;
 }
 
 .subscribe-button:hover {
@@ -472,6 +472,27 @@ The first (most recent) post in the list is styled to be bigger than the others 
  */
 
 @media (min-width: 795px) {
+    .propoganda-featured-post .post-card {
+        flex: 1 1 100% !important;
+        flex-direction: row !important;
+    }
+
+    .propoganda-featured-post .post-card .post-card-image-link {
+        position: relative !important;
+        flex: 1 1 auto !important;
+    }
+
+    .propoganda-featured-post .post-card .post-card-image {
+        position: absolute !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .propoganda-featured-post .post-card .post-card-content {
+        flex: 0 1 357px;
+        border-top: 3px solid var(--black);
+    }
+
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) {
         flex: 1 1 100%;
         flex-direction: row;
@@ -979,12 +1000,13 @@ Usage (In Ghost editor):
 /* ---------------------------------------------------------- */
 
 .subscribe-form {
-    margin: 1.5em 0;
-    padding: 6.5vw 7vw 7vw;
+    margin: .5em 0 1.5em 0;
+    padding: 1vw 7vw 5vw;
     border: color(var(--whitegrey) l(+2%)) 1px solid;
     text-align: center;
     background: color(var(--whitegrey) l(+4%));
     border-radius: 7px;
+    width: 100%;
 }
 
 .subscribe-form-title {
@@ -1006,6 +1028,7 @@ Usage (In Ghost editor):
 
 .subscribe-form form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 420px;
@@ -1020,13 +1043,12 @@ Usage (In Ghost editor):
     display: block;
     width: 100%;
     padding: 10px;
-    border: color(var(--lightgrey) l(+7%)) 1px solid;
+    border: 1px solid var(--lightgrey);
     color: var(--midgrey);
     font-size: 1.8rem;
     line-height: 1em;
     font-weight: normal;
     user-select: text;
-    border-radius: 5px;
     transition: border-color 0.15s linear;
 
     -webkit-appearance: none;
@@ -1046,16 +1068,10 @@ Usage (In Ghost editor):
     color: #fff;
     font-size: 1.5rem;
     line-height: 37px;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
-    background: linear-gradient(
-    color(var(--blue) whiteness(+7%)),
-    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color(var(--blue) lightness(-4%) saturation(-10%))
-    );
-    border-radius: 5px;
+    background-color: var(--red);
     box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
 
     -webkit-font-smoothing: subpixel-antialiased;
